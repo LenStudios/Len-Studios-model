@@ -18,10 +18,41 @@
   <body>
     <main>
       <!-- Use it like any other HTML element -->
-<model-viewer alt="Easel with Len Studios Cockatoo artwork in a frame on it." src="whole-trying.gltf"  ar environment-image="environment.hdr" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+<model-viewer alt="Easel with Len Studios Cockatoo artwork in a frame on it." src="whole-trying.gltf"  ar environment-image="environment.hdr" shadow-intensity="1" camera-controls touch-action="pan-y">
+  <div class="controls">
+    <div>Variant: <select id="variant"></select></div>
+  </div>
+
+
+  
+</model-viewer>
+
+<script>
+const modelViewerVariants = document.querySelector("model-viewer#shoe");
+const select = document.querySelector('#variant');
+
+modelViewerVariants.addEventListener('load', () => {
+  const names = modelViewerVariants.availableVariants;
+  for (const name of names) {
+    const option = document.createElement('option');
+    option.value = name;
+    option.textContent = name;
+    select.appendChild(option);
+  }
+  // Adds a default option.
+  const option = document.createElement('option');
+    option.value = 'default';
+    option.textContent = 'Default';
+    select.appendChild(option);
+});
+
+select.addEventListener('input', (event) => {
+  modelViewerVariants.variantName = event.target.value === 'default' ? null : event.target.value;
+});
+</script>
+      
   </body>
     </main>
 
 
 </html>
-
