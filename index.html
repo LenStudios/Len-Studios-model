@@ -31,30 +31,7 @@
     const up_names = document.getElementsByName("variant");
 console.log(up_names[0].tagName); // displays "INPUT"</script>
     
-<script>
-const modelViewerVariants = document.querySelector("model-viewer#whole");
-const select = document.querySelector('#variant');
 
-modelViewerVariants.addEventListener('load', () => {
-  const names = modelViewerVariants.availableVariants;
-  for (const name of names) {
-    const option = document.createElement('option');
-    option.value = name;
-    option.textContent = name;
-    select.appendChild(option);
-    console.name;
-  }
-  // Adds a default option.
-  const option = document.createElement('option');
-    option.value = 'default';
-    option.textContent = 'Default';
-    select.appendChild(option);
-});
-
-select.addEventListener('input', (event) => {
-  modelViewerVariants.variantName = event.target.value === 'default' ? null : event.target.value;
-});
-</script>
 
 
     
