@@ -6,13 +6,10 @@
     <meta name="description" content="&lt;model-viewer&gt; template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link type="text/css" href="./styles.css" rel="stylesheet"/>
-<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
-
-    
   </head>
   <body>
     <!-- <model-viewer> HTML element -->
-    <model-viewer id="whole" src="whole-trying333.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="1.31" environment-image="environment.hdr" exposure="0.96" tone-mapping="commerce">
+    <model-viewer src="whole-trying333.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="1.31" environment-image="environment.hdr" exposure="0.96" tone-mapping="commerce">
       <div class="progress-bar hide" slot="progress-bar">
           <div class="update-bar"></div>
       </div>
@@ -22,67 +19,11 @@
       <div id="ar-prompt">
           <img src="ar_hand_prompt.png">
       </div>
-
-
-<div class="controls">
-      <p>Normals</p>
-      <select id="normals2">
-        <option>None</option>
-        <option value="4.jpg">Damaged helmet</option>
-        <option value="Wood09_2K_BaseColor.png">Lantern Pole</option>
-        <option value="Paper006_2K-JPG_Color.jpg">Water Bottle</option>
-      </select>
-      <p>Custom texture name</p>
-      <p id="texture-name">None</p>
-      <p>Image name from file name</p>
-      <p id="image-name">None</p>
-    </div>
-      
     </model-viewer>  
     <script src="script.js"></script>
     <!-- Loads <model-viewer> for browsers: -->
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
-
-
-<script type="module">
-const modelViewerTexture = document.querySelector("model-viewer#whole");
-const textureName = document.querySelector('#texture-name');
-const imageName = document.querySelector('#image-name');
-
-modelViewerTexture.addEventListener("load", () => {
-
-  const material = modelViewerTexture.model.materials[0];
-
-  const createAndApplyTexture = async (channel, event) => {
-    if (event.target.value == "None") {
-      // Clears the texture.
-      material[channel].setTexture(null);
-      // Display the names values
-      textureName.innerText = "None";
-      imageName.innerText = "None";
-    } else if (event.target.value) {
-      // Creates a new texture.
-      const texture = await modelViewerTexture.createTexture(event.target.value);
-      // Set the texture name
-      texture.name = event.target.options[event.target.selectedIndex].text.replace(/ /g, "_").toLowerCase();
-      // Applies the new texture to the specified channel.
-      material[channel].setTexture(texture);
-      // Display the names values
-      textureName.innerText = texture.name;
-      imageName.innerText = texture.source.name;
-    }
-  }
-
-  document.querySelector('#normals2').addEventListener('input', (event) => {
-    createAndApplyTexture('normalTexture', event);
-  });
-});
-
-</script>
-
-    
   </body>
 </html>
-
 
 
