@@ -19,10 +19,6 @@ model-viewer {
   background-color: rgba(0, 0, 0, 0);
 }
 
-.centered {
-  width: 100%;
-  text-align: center;
-}
 
 .progress-bar {
   display: block;
