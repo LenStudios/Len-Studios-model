@@ -21,14 +21,12 @@ model-viewer {
 
 
 
-.slot.interaction-prompt.visible{
-  opacity: 0;
-}
 
-.hand {
-display: none;
-  
-}
+  .dot{
+    display: none;
+opacity: 0;
+  }
+
 
 
 .progress-bar {
