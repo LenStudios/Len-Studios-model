@@ -17,11 +17,11 @@ model-viewer {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0);
-  camera-orbit: 0, 0, 0;
+  camera-orbit: 180.01deg 87.19deg 29.44m;
 }
 
 .large {
-  camera-orbit: 0, 0, 0;
+  camera-orbit: 180.01deg 87.19deg 29.44m;
 }
 
 
