@@ -20,7 +20,7 @@ model-viewer {
 }
 
 
-.slot.poster {
+.slot.poster.show {
 scale: 0.5;
   
 }
