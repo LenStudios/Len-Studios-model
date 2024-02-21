@@ -21,6 +21,7 @@ resetCameraMeter();
 });
 
 
+      const mv = document.querySelector("model-viewer");
 
 
 function resetCameraPercent() {
