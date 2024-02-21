@@ -20,7 +20,7 @@ model-viewer {
 }
 
 
-#prompt {
+#prompt.animated-container {
   display: none;
 }
 
