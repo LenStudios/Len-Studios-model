@@ -20,8 +20,9 @@ model-viewer {
 }
 
 
-#prompt.animated-container {
-  display: none;
+.hand {
+display: none;
+  
 }
 
 
