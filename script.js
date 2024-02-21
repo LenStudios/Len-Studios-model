@@ -18,4 +18,4 @@ public void mouseClicked(MouseEvent event)
   if (event.getClickCount() == 2 && event.getButton() == MouseEvent.BUTTON1) {
     System.out.println("double clicked");
   }
-}
+};
