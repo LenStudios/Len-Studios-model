@@ -100,7 +100,6 @@ model-viewer > #ar-prompt {
   position: absolute;
   left: 50%;
   bottom: 60px;
-  animation: elongate 2s infinite ease-in-out alternate;
   display: none;
 }
 
