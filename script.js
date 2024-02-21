@@ -11,3 +11,11 @@ const onProgress = (event) => {
   }
 };
 document.querySelector('model-viewer').addEventListener('progress', onProgress);
+
+
+public void mouseClicked(MouseEvent event)
+{
+  if (event.getClickCount() == 2 && event.getButton() == MouseEvent.BUTTON1) {
+    System.out.println("double clicked");
+  }
+}
