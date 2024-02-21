@@ -26,10 +26,5 @@ document.querySelector('model-viewer').addEventListener('dblclick', function(eve
       }    });
 
 
-  <div class="double" ondblclick="resetCameraPercent()">
-  </div>
-    <div class="double" ondblclick="resetCameraMeter()">
-    </div>
 
 
-    </script>
