@@ -88,21 +88,6 @@ model-viewer {
   to   { transform: translateX(-100px); }
 }
 
-model-viewer > #ar-prompt {
-  position: absolute;
-  left: 50%;
-  bottom: 60px;
-  display: none;
-}
 
-model-viewer[ar-status="session-started"] > #ar-prompt {
-  display: none;
-}
-
-
-model-viewer > #ar-prompt > img {
-    animation: circle 4s linear infinite;
-
-}
 
 
