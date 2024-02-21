@@ -33,6 +33,24 @@
       </div>
     </model-viewer>  
 
+  <button onclick="resetCameraPercent()">
+      resetCamera(%)
+    </button>
+    <button onclick="resetCameraMeter()">
+      resetCamera(m)
+    </button>
+    <script>
+      const mv = document.querySelector("model-viewer");
+      function resetCameraPercent() {
+        mv.cameraOrbit = '0deg 75deg 105%'
+        mv.fieldOfView = 'auto'
+      }
+      function resetCameraMeter() {
+        mv.cameraOrbit = '0deg 75deg 0.5m'
+        mv.fieldOfView = 'auto'
+      }
+    </script>
+    
 
 
     <script src="script.js"></script>
