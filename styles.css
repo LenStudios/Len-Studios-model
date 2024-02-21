@@ -20,11 +20,6 @@ model-viewer {
 }
 
 
-.slot.poster.show {
-scale: 0.5;
-  
-}
-
 .progress-bar {
   display: block;
   width: 33%;
