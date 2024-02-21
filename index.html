@@ -34,10 +34,10 @@
     </model-viewer>  
 
 
-  <div class="userInput" ondblclick="resetCameraPercent()">
-  </div>
-    <div class="userInput" ondblclick="resetCameraMeter()">
-    </div>
+  <model-viewer ondblclick="resetCameraPercent()">
+  </model-viewer>
+    <model-viewer class="userInput" ondblclick="resetCameraMeter()">
+    </model-viewer>
     <script>
       const mv = document.querySelector("model-viewer");
       function resetCameraPercent() {
