@@ -12,13 +12,9 @@ const onProgress = (event) => {
 };
 document.querySelector('model-viewer').addEventListener('progress', onProgress);
 
-var elem = document.querySelector('model-viewer'),
-
 
 // Add event listener for `click` events.
-elem.addEventListener('click', function(event) {
+document.querySelector('model-viewer').addEventListener('click', function(event) {
 
             alert('clicked an element');
     });
-
-};
