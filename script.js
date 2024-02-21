@@ -14,7 +14,22 @@ document.querySelector('model-viewer').addEventListener('progress', onProgress);
 
 
 // Add event listener for `click` events.
-document.querySelector('model-viewer').addEventListener('click', function(event) {
+document.querySelector('model-viewer').addEventListener('dblclick', function(event) {
 
-            alert('clicked an element');
-    });
+      function resetCameraPercent() {
+        mv.cameraOrbit = '180.01deg 87.19deg 105%'
+        mv.fieldOfView = 'auto'
+      }
+      function resetCameraMeter() {
+        mv.cameraOrbit = '180.01deg 87.19deg 29.44m'
+        mv.fieldOfView = 'auto'
+      }    });
+
+
+  <div class="double" ondblclick="resetCameraPercent()">
+  </div>
+    <div class="double" ondblclick="resetCameraMeter()">
+    </div>
+
+
+    </script>
