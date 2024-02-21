@@ -12,4 +12,8 @@ const onProgress = (event) => {
 };
 document.querySelector('model-viewer').addEventListener('progress', onProgress);
 
-document.getElementById("camera-orbit").reset();
+const reset = document.querySelector('model-viewer');
+
+reset.addEventListener("dblclick", (e) => {
+  reset.classList.toggle("large");
+});
