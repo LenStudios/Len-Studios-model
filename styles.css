@@ -21,14 +21,6 @@ model-viewer {
 
 
 
-
-  .dot{
-    display: none;
-opacity: 0;
-  }
-
-
-
 .progress-bar {
   display: block;
   width: 33%;
