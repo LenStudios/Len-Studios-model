@@ -12,22 +12,27 @@ const onProgress = (event) => {
 };
 document.querySelector('model-viewer').addEventListener('progress', onProgress);
 
-const reset = (event) => {
+
+
+document.querySelector('model-viewer').addEventListener('dblclick', function(event) {
+
+resetCameraPercent();
+resetCameraMeter();
+});
+
+
 
 
 function resetCameraPercent() {
         mv.cameraOrbit = '180.01deg 87.19deg 105%'
         mv.fieldOfView = 'auto'
-      }
+      };
       function resetCameraMeter() {
         mv.cameraOrbit = '180.01deg 87.19deg 29.44m'
         mv.fieldOfView = 'auto'
-      }    };
+      };    
   
 
-
-// Add event listener for `click` events.
-document.querySelector('model-viewer').addEventListener('dblclick', reset); 
 
 
 
