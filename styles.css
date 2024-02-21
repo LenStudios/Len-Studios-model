@@ -99,8 +99,7 @@ model-viewer > #ar-prompt {
 }
 
 model-viewer[ar-status="session-started"] > #ar-prompt {
-  display: block;
+  display: none;
 }
 
-model-viewer > #ar-prompt > img {
-}
+
