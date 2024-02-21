@@ -20,6 +20,10 @@ model-viewer {
 }
 
 
+.slot.interaction-prompt.visible {
+  opacity: 0;
+}
+
 .progress-bar {
   display: block;
   width: 33%;
