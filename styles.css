@@ -19,6 +19,12 @@ model-viewer {
   background-color: rgba(0, 0, 0, 0);
 }
 
+
+.prompt {
+  display: none;
+}
+
+
 .progress-bar {
   display: block;
   width: 33%;
