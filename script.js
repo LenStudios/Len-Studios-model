@@ -21,7 +21,7 @@ resetCameraMeter();
 });
 
 
-d3.select("svg").remove()
+document.querySelector('svg').remove();
 
 
       const mv = document.querySelector("model-viewer");
