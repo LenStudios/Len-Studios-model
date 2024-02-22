@@ -20,7 +20,7 @@ model-viewer {
 }
 
 
-.slot .interaction-prompt .visible {
+.slot .interaction-prompt .cover .centered .visible {
 opacity: 0;
 }
 
