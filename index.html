@@ -11,66 +11,14 @@
   </head>
   <body>
 
-    <style>
-  .dot{
-    display: block;
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    transform: translateX(-50%) translateY(-50%);
-    border-radius: 50%;
-    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.7), 0px 0px 5px 1px rgba(0, 0, 0, 0.8);
-    border: 1px solid rgba(255, 255, 255, 0.9);
-    background-color: rgba(0, 0, 0, 0.7);
-  }
-</style>
 
     <!-- <model-viewer> HTML element -->
-    <model-viewer class="double" id="prompt-demo" src="whole-trying-combining333.glb" camera-controls touch-action poster="poster.png" shadow-intensity="1" environment-image="environment.hdr" exposure="2" tone-mapping="commerce" camera-orbit="180.01deg 87.19deg 29.44m" field-of-view="30deg" camera-target="0.9805m 0.1m 0.873m" min-camera-orbit="0 0 5m" disable-pan  interaction-prompt-threshold="1" interaction-prompt="none" 
->
+    <model-viewer class="double" src="whole-trying-combining333.glb" camera-controls touch-action poster="poster.png" shadow-intensity="1" environment-image="environment.hdr" exposure="2" tone-mapping="commerce" camera-orbit="180.01deg 87.19deg 29.44m" field-of-view="30deg" camera-target="0.9805m 0.1m 0.873m" min-camera-orbit="0 0 5m" disable-pan  interaction-prompt-threshold="1" >
       <div class="progress-bar hide" slot="progress-bar">
           <div class="update-bar"></div>
 
-          <div class="dot" slot="finger0"></div>
-  <div class="dot" slot="finger1"></div>
-
-
-
     </model-viewer>  
 
-
-    
-<script>
-  const modelViewerPrompt = document.querySelector("#prompt-demo");
-  
-  const PROMT_MS = 3000;
-  const REPEAT_MS = 5000;
-
-
-
-
-  let hasInteracted = false;
-
-  const prompt = () => {
-    if (!hasInteracted) {
-      modelViewerPrompt.interact(PROMT_MS);
-      setTimeout(prompt, REPEAT_MS);
-    }
-  };
-
-  modelViewerPrompt.addEventListener('poster-dismissed', () => {
-    prompt();
-  }, {once: true});
-
-  const interacted = (event) => {
-    if (event.detail.source === 'user-interaction') {
-      hasInteracted = true;
-      modelViewerPrompt.removeEventListener('camera-change', interacted);
-    }
-  };
-
-  modelViewerPrompt.addEventListener('camera-change', interacted);
-</script>
 
     <script src="script.js"></script>
     <!-- Loads <model-viewer> for browsers: -->
